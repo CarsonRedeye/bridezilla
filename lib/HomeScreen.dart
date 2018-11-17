@@ -1,4 +1,4 @@
-import 'package:bridezilla/Screen2.dart';
+import 'package:bridezilla/ThemeListScreen.dart';
 import 'package:bridezilla/SettingsScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: <Widget>[
             RaisedButton(
               onPressed: () => Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Screen2())),
+                  context, MaterialPageRoute(builder: (context) => ThemeListScreen())),
               child: Text(
                 'Explore wedding idea',
               ),
