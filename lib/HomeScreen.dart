@@ -68,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 FlatButton(
                   color: peach,
                   onPressed: () => Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Screen2())),
+                      MaterialPageRoute(builder: (context) => ThemeListScreen())),
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Text(
