@@ -40,33 +40,37 @@ List<Widget> _buildGridTiles(numberOfTiles, context) {
 
     return new Container(
       child: SafeArea(
-        child: Stack(
+        child: InkWell(
+          onTap: () => Navigator.push(
+              context, MaterialPageRoute(builder: (context) => ThemeDescriptionScreen(index + 1, titles[index + 1]))),
+          child: Stack(
 //          onPressed: () => Navigator.push(
 //              context, MaterialPageRoute(builder: (context) => ThemeDescriptionScreen(index + 1, titles[index + 1]))),
-          fit: StackFit.expand,
-          children: [
-            Image.asset(imageName, fit: BoxFit.fitHeight),
-            Center(
-              child: Text(
-                titles[index + 1],
-                style: Theme.of(context).textTheme.display2.copyWith(
-                  color: Colors.white,
-                  shadows: <Shadow>[
-                    Shadow(
-                      offset: Offset(4.0, 4.0),
-                      blurRadius: 3.0,
-                      color: Color.fromARGB(255, 0, 0, 0),
-                    ),
-                    Shadow(
-                      offset: Offset(4.0, 4.0),
-                      blurRadius: 8.0,
-                      color: Color.fromARGB(125, 0, 0, 255),
-                    ),
-                  ],
+            fit: StackFit.expand,
+            children: [
+              Image.asset(imageName, fit: BoxFit.fitHeight),
+              Center(
+                child: Text(
+                  titles[index + 1],
+                  style: Theme.of(context).textTheme.display2.copyWith(
+                    color: Colors.white,
+                    shadows: <Shadow>[
+                      Shadow(
+                        offset: Offset(4.0, 4.0),
+                        blurRadius: 3.0,
+                        color: Color.fromARGB(255, 0, 0, 0),
+                      ),
+                      Shadow(
+                        offset: Offset(4.0, 4.0),
+                        blurRadius: 8.0,
+                        color: Color.fromARGB(125, 0, 0, 255),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
