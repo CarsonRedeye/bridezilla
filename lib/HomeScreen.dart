@@ -1,3 +1,4 @@
+import 'package:bridezilla/InformationScreen.dart';
 import 'package:bridezilla/Screen2.dart';
 import 'package:bridezilla/SettingsScreen.dart';
 import 'package:bridezilla/colors.dart';
@@ -93,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => SettingsScreen())),
+                          builder: (context) => InformationScreen())),
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Text(
