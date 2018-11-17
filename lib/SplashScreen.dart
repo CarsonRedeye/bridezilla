@@ -8,15 +8,50 @@ class SplashScreen extends StatefulWidget {
 }
 
 class SplashScreenState extends State<SplashScreen> {
+
+  Future goToNextPageAfterDelay() async {
+    await new Future.delayed(const Duration(seconds: 3));
+
+  }
+
   @override
   Widget build(BuildContext context) {
+
+
+    @override
+    void initState() {
+      goToNextPageAfterDelay()
+    }
+
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
+        alignment: Alignment.bottomCenter,
         children: [
           Image.asset(
             'assets/splashScreen.jpg',
             fit: BoxFit.cover,
+          ),
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(32.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                  Text(
+                    "Bridezilla",
+                    style: Theme.of(context).textTheme.display2.copyWith(
+                      color: Colors.white
+                    ),
+                  ),
+                  SizedBox(height: 16.0),
+                  Text("Your dream wedding in a click",
+                  style: Theme.of(context).textTheme.headline.copyWith(
+                    color: Colors.white
+                  ),),
+                ],
+              ),
+            ),
           ),
         ],
       ),
