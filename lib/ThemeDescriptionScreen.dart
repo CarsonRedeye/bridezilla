@@ -1,3 +1,4 @@
+import 'package:bridezilla/InformationScreen.dart';
 import 'package:bridezilla/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -5,7 +6,7 @@ class ThemeDescriptionScreen extends StatefulWidget {
   final int index;
   final String title;
 
-  ThemeDescriptionScreen(this.index, this.title)
+  ThemeDescriptionScreen(this.index, this.title);
 
   @override
   ThemeDescriptionScreenState createState() {
@@ -81,7 +82,7 @@ class ThemeDescriptionScreenState extends State<ThemeDescriptionScreen> {
                 onPressed: () => Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => HomeScreen())),
+                        builder: (context) => InformationScreen())),
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Text(

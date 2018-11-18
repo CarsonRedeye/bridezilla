@@ -31,7 +31,7 @@ List<Widget> _buildGridTiles(numberOfTiles, context) {
     "Backyard",
     "Church",
     "Park",
-    "Castel"
+    "Castle"
   ];
   List<Container> containers =
       new List<Container>.generate(numberOfTiles, (int index) {
@@ -52,7 +52,7 @@ List<Widget> _buildGridTiles(numberOfTiles, context) {
               Center(
                 child: Text(
                   titles[index + 1],
-                  style: Theme.of(context).textTheme.display2.copyWith(
+                  style: Theme.of(context).textTheme.display1.copyWith(
                     color: Colors.white,
                     shadows: <Shadow>[
                       Shadow(

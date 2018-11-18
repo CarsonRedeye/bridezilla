@@ -1,3 +1,5 @@
+import 'package:bridezilla/TaskScreen.dart';
+import 'package:bridezilla/colors.dart';
 import 'package:flutter/material.dart';
 
 class InformationScreen extends StatefulWidget {
@@ -30,20 +32,22 @@ class InformationScreenState extends State<InformationScreen> {
                     decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: 'Enter text',
-                        labelText: 'Budget: \$10,000'),
-                    controller: new TextEditingController(),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: 'Enter text',
                         labelText: 'Number of guests'),
                     controller: new TextEditingController(),
                   ),
                 ),
+
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextField(
+
+                    decoration: InputDecoration(
+                        hintText: 'Enter text',
+                        labelText: 'Budget: \$10,000'),
+                    controller: new TextEditingController(),
+                  ),
+                ),
+
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextField(
@@ -63,6 +67,21 @@ class InformationScreenState extends State<InformationScreen> {
                   }).toList(),
                   hint: Text("Date"),
                   onChanged: (_) {},
+                ),
+                FlatButton(
+                  color: peach,
+                  onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => TaskScreen())),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Text(
+                      'SELECT',
+                      style: Theme.of(context).textTheme.title,
+
+                    ),
+                  ),
                 ),
               ],
             ),
